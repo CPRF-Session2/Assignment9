@@ -1,0 +1,9 @@
+Jared Wasserman
+
+1) malloc() and calloc() both dynamically allocate memory but are several differences. malloc() takes one argument of size in bytes needed and allocates that much memory. malloc() does not initialize the memory so you can use memset() (which is in the string.h library) to set all the memory to 0. calloc() takes two arguments the size or number of blocks needed and then the size of each block. calloc() unlike malloc() automatically initializes the memory 0.
+
+2) You would determine the size of an allocated portion of memory by traversing through the linked list and adding to a counter every time you move so you can find the the length of the linked list. Then you would multiply the counter by the size of the data type that the blocks are.
+
+3) You have to free memory in the heap because it is dynamically allocated and all the programs on the computer share the heap. The operating system will attempt to clear it when you close the program but it does not always do a good job. Since the memory in heap is dynamically allocated its scope is from when it is allocated until when it is cleared. Memory in the stack has a scope and once that scope ends it is deleted. Also the memory is the stack is given to your program when it starts and cleared when it ends.  
+
+4) You have to test the return value from malloc to confirm that it was able to allocate the memory you asked it to. malloc() will return NULL if it did not successfully allocate the memory and you want to check for this so the program does not crash when you try to use memory that was to allocated.
