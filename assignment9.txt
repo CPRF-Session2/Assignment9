@@ -1,0 +1,12 @@
+1.malloc takes 1 argument, memory required in bytes, calloc however takes 2 arguments, the amunt of elements and the size of each element
+
+	malloc doesnt initialize while calloc initializes to 0 - this means that malloc goes with memset
+
+	however they both return a pointer on success and NULL on failure
+
+2. There is no direct way to determine the size of allocated memory, (as far as I know), but you can either check the code or use realloc to set the size of allocated memory and then you would know
+
+
+3. I would guess you have to free memory from the heap and not the stack b/c the heap is dynamically allocated, and memory in the stack is static, you cannot change how much you are using so it wouldnt make sense to be able to free it, however in the heap the amount of memory being used can change so when you change it you need to tell the computer that it can use that memory again b/c it is not being used.
+
+4. You need to test the return value of malloc b/c it returns NULL on failure and a pointer on success so if it returns NULL you know that it failed
