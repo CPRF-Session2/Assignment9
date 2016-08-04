@@ -1,0 +1,26 @@
+/*Rebecca Hale Assignment 9 Part 2*/
+1. malloc() and calloc() are both functions that are used to allocate
+bytes of memory to specific variables. However, calloc() automatically
+initializes the memory to 0 while malloc does not have jurisdiction
+to access the memory and save values within it. malloc() is only passed
+the variables size in bytes while calloc() is passed the number of items
+and the size of each variable in bytes.  Both functions return a void 
+pointer. 
+
+2. The size of an allocated portion of memory can be determined by 
+multiplying the amount of items that are stored in that portion of 
+memory by the amount of bytes used by the variables stored in each portion
+of memory.  For instance, if I wanted to determine the amount of memory 
+used to store an integer array of length 5, I would multiply the amount of 
+elements, 5, by the amount of bytes used in each element, 4, to find out
+the total amount of memory allocated to the array.
+
+3. Memory must be freed in heap but not in stack because memory saved in 
+stack is automatically freed while memory in heap that is not freed will 
+result in memory leaks, which means places of memory will be quarantined
+and will not be able to store any new data.
+
+4. The return value of malloc() must be saved because memory in malloc() isstored in heap and memory that is not freed in heap can result in memory
+leaks.  If malloc() fails and returns NULL and the return value is not
+checked, the program could crash because not enough memory space could
+be available on the machine.
