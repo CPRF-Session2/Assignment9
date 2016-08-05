@@ -1,0 +1,9 @@
+Drew French
+
+1)	malloc() takes size_t & number of bytes of space and allocates that amount of bytes; you then need to fill the space. Calloc takes size_t, number of bytes per element, and number of elements and allocates [bytes per element] for each element. This space is filled by these elements.
+
+2)	Maybe iterate through it to fill it with integers and multiply the number of integers by 4 to get the amount of bytes?
+
+3)	Heap resets only when the computer is restarted; stack resets when the program ends.
+
+4)	If it's NULL, there is no space.
