@@ -1,0 +1,10 @@
+Mariposa Lee
+
+1. malloc() allocates a chunk of memory, returning a pointer. calloc() allocates memory for an array and sets the elements to zero. malloc() requires one parameter (specified number of bytes) and calloc() requires two parameters (the size of the number of elements multiplied by the size of the element). If successful, both malloc() and calloc() return a pointer to the allocated memory. 
+
+2. If the memory was already allocated, I don't think there is a way to determine its size. However, if you're determining the size of memory to allocate, calloc() multiplies size and elements to allocate the portion of memory. 
+
+
+3. Memory that is stored in stack is managed automatically, which means memory is allocated and freed without the user having to do anything. However, memory stored in heap using dynamic memory allocation requires the user to manually allocate memory and free it. 
+
+4. You have to test the return value from malloc to make sure it does not return NULL. That would show there was a memory leak. When a memory leak happens, you lose the pointer to the memory-allocated region and it becomes impossible to free memory. This is a problem because the heap can hold limited space. 
