@@ -1,0 +1,7 @@
+1.)Malloc takes one argument and calloc takes two. Malloc takes the size in bytes of the data type that we need. Calloc takes that and how many terms there will be in our ilnked list.
+
+2.) Take how many elements there are and multiply it by the size in bytes of that data type.
+
+3.) Stack data is automatically cleared at the end of your program. This is not the case for heap and if you don't free the memory, you could have memory leaks.
+
+4.)To know if the memory is allocated correctly
