@@ -1,0 +1,13 @@
+Jinoo Hong
+
+1. Thoroughly compare and contrast malloc() and calloc(). Make sure to include details about parameters, return values, etc.
+malloc takes only one argument which is the size in bytes of the memory we would need. Calloc on the otherhand takes two arguments: the number of items and the size in bytes of each of those items. It also initializes each item to 0. 
+
+2. How would you determine the size of an allocated portion of memory?
+Find the each element and multiply it by the number of bytes the type that element takes.
+
+3. Why do you have to free memory on the heap but not on the stack? 
+Because the data is stack is cleared once the program ends and is not dynamically allocated. In the heap however, because the data is dynamically allocated, you might have leaked memory and have a very inefficient program (spacewise).
+
+4. Why do you need to test the return value from malloc?
+so that you know if the memory has been allocated successfully or not. 
