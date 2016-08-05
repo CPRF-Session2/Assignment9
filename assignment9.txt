@@ -19,7 +19,7 @@ Its elements are set to zero and like malloc, returns a pointer(or NULL) to the 
 I would determine the size of an allocated portion of memory by multiplying the amount of items that are stored by the number of bytes they each take up. For example, let's say I have a char array with three characters. I can multiple the three by one (char == 1 byte) to find the size of the allocated memory.
 
 3.
-You have free memory on the heap but not the on the stack because the stack's memory is freed automatically,(after your program runs), but since the heap can store values from multiple programs, you have to free the memory manually.
+You have free memory on the heap but not the on the stack because the stack's memory is freed automatically,(after your program ends), but since the heap can store values from multiple programs, you have to free the memory manually.
 
 4.
 You need to test the return value from malloc because you need to check if you the memory was allocated successfully. If it wasn't, you don't have enough memory left in your heap which could cause you to not be able to use the heap at all.
