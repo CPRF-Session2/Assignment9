@@ -1,0 +1,25 @@
+Matthew Kellerman
+
+1.
+malloc and calloc are both functions that are used to allocate bytes of memory to specifc variables.
+
+malloc() is written as dataType *malloc(size_t numBytes)
+
+calloc() is written as  dataType *calloc(size_t numElements, size_t size)
+
+malloc() allocates the paramenter numBytes in that number of bytes in heap
+
+The elements are not initialized and returns a pointer to the allocated memory on success. If it fails, NULL is returned.
+
+calloc() allocates the size(in bytes) times the number of elements in  memory.
+
+Its elements are set to zero and like malloc, returns a pointer(or NULL) to the allocated memory on success or failure.
+
+2.
+I would determine the size of an allocated portion of memory by multiplying the amount of items that are stored by the number of bytes they each take up. For example, let's say I have a char array with three characters. I can multiple the three by one (char == 1 byte) to find the size of the allocated memory.
+
+3.
+You have free memory on the heap but not the on the stack because the stack's memory is freed automatically,(after your program runs), but since the heap can store values from multiple programs, you have to free the memory manually.
+
+4.
+You need to test the return value from malloc because you need to check if you the memory was allocated successfully. If it wasn't, you don't have enough memory left in your heap which could cause you to not be able to use the heap at all.
