@@ -1,0 +1,9 @@
+Ashank Kumar 
+
+1. malloc takes in one argument while calloc takes in two. malloc only needs the size of requested memory in bytes. calloc needs the number of elements being allocated and the size of the elements in bytes. Also calloc initializes all the values in list to 0, while malloc leaves them empty. Both malloc and calloc return a pointer that points to the allocated memory. 
+
+2. We can find the size of the allocated memory by using sizeof().
+
+3. Space allocated in the heap will remain allocated by malloc until it is freed, while in the stack any memory being used by the program is freed after the program is done executing.
+
+4. We need to test the return value of malloc to make sure there was enough free memory in the heap to be used for allocation.
