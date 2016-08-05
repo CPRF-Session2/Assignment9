@@ -1,0 +1,17 @@
+1. Throughly compare and contrast malloc() and calloc(). Make sure to include details about parameters, return values, etc.
+	malloc: format = (castType) malloc (sizeInBytes);
+		takes only one argument
+		requires no inilization 
+		use memset () to set memory to 0 
+	calloc: format = (castType) calloc (blocks, sizeOfBlocks);
+		takes two arguments 
+		initializes allocates memory to 0 
+
+2. How would you determine the size of an allocated portion of memory?
+	We could use sizeof and our pointer /* ?? */
+
+3. Why do you have to free memory on the heap but not on the stack?
+	You have to free memory on the heap because if you dont, it will cause a memory leak. Memory on the stack is automatically freed when the function terminates. 
+
+4. Why do you need to test the return value from malloc?
+	To test if memory has been successfully allocated 
