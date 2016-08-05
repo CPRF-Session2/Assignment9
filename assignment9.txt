@@ -1,0 +1,10 @@
+Priyanka Musti
+1.
+malloc() takes 1 argument and its stored in bytes. calloc() takes 2 argument: array size and element counts.
+2.
+You can find the size of allocated memory by using realloc to set the size of the array
+
+3.
+You can free memory on the heap but not on the stack because the heap is static but the heap is dynamically allocated. You cannot change how much memory you are using on the stack but in te heap you can.
+4.
+You need a pointer allocated to memory on success or NULL on failure.
