@@ -57,7 +57,7 @@ void clear(node*pr)
 node *temp;
 while(pr->next!=NULL)
 {
-	//does same thing as remove1 function except does it for all the nodes except the head one
+	//does same thing as remove1 function except does it for all the nodes except the head one and frees them
 
 temp = pr;
 free(pr);
