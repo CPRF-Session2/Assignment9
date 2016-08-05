@@ -1,0 +1,10 @@
+Can Parlar
+
+1. In malloc elements are not initlialized, in calloc they are zero. Malloc allocates bytes in heap, calloc allocates size * number of elements in memory. Both of them returns pointer if it succeeds and NULL if it fails.
+
+2.Using the sizeof command.
+
+3.Can cause memory leaks. Filles up heap.
+
+4. I dont know
+
