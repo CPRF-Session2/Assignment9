@@ -12,7 +12,7 @@ typedef struct node {
 
 //allows me to create nodes for data structure
 //when you create a new node, it will go the beginnig of the list
-node* create(node *pointer,int data)
+node* add(node *pointer,int data)
 		 {
 node *newPtr =(struct node*)malloc(sizeof(struct node));
 newPtr->next = pointer;
@@ -58,11 +58,13 @@ node *temp;
 while(pr->next!=NULL)
 {
 	//does same thing as remove1 function except does it for all the nodes except the head one
+
 temp = pr;
 free(pr);
 pr = temp;
 pr = pr->next;
 }
+free(pr);
 }
 
 int smallestLength(node*p, node*p2)
@@ -137,10 +139,10 @@ head = (struct node*)malloc(sizeof(struct node));
 
 head->next= NULL;
 
-head = create(head,37);
-head = create(head,17);
-head = create(head,9);
-head = create(head,2);
+head = add(head,37);
+head = add(head,17);
+head = add(head,9);
+head = add(head,2);
 
 printList(head);
 
@@ -154,10 +156,10 @@ struct node*head2;
 head2= (struct node *)malloc(sizeof(struct node));
 head2->next=NULL;
 
-head2 = create(head2,34);
-head2 = create(head2,56);
-head2 = create(head2,1);
-head2 = create(head2,5);
+head2 = add(head2,34);
+head2 = add(head2,56);
+head2 = add(head2,1);
+head2 = add(head2,5);
 
 printf("The second linked list is:\n");
 printList(head2);
@@ -166,7 +168,7 @@ printf("\n");
 printf("%d is the size of the smaller list\n",smallestLength(head,head2));
 
 printf("\n");
- head2= create(head2,-10);
+ head2= add(head2,-10);
   printList(head2);
 
 printf("\n");
